@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="mathscheatobject" class="com.rishav.springloosecoupling.MathCheat"></bean>
+    <bean id="sciencecheatobject" class="com.rishav.springloosecoupling.ScienceCheat"></bean>
+    <bean id="historycheatobject" class="com.rishav.springloosecoupling.HistoryCheat"></bean>
+    <bean id="student" class="com.rishav.springloosecoupling.Student">
+        <property name="cheat" ref="historycheatobject"></property>
+    </bean>
+
+</beans>
